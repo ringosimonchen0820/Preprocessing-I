@@ -50,51 +50,181 @@ table {
 
 /* Set every element's box-sizing to border-box */
 
+// variables
+@backgroundColor: whitesmoke;
+@borderColor: #fd5f00;
+@borderThickness: 7px;
+
+
 // mixins
-.flexbox () {
+.flexboxColumn() {
 	display: flex;
 	flex-direction: column;
 }
+.center() {
+	display: flex;
+	justify-content: center;
+}
 
+.spaceAround() {
+	display: flex;
+	justify-content: space-around;
+}
 
+.BorderInset() {
+	border: @borderThickness inset @borderColor;
+}
 
+.borderOutset() {
+	border: @borderThickness outset @borderColor;
+}
 
 
 
 * {
 	box-sizing: border-box;
-	border:1px solid red !important;
+	/*border:1px solid red !important;*/
 }
 
 html, body {
 	height: 100%;
 }
 
-
 img{
-	width: 50%;
-	height: 20%;
+	width: 120%;
+	border-radius: 50%;
+    border: @borderThickness groove @borderColor;
 }
 
-.firstPart {
-	.flexbox ();
-	background-color: silver;
-}
-
-
-.secondPart{
-	display: flex;
-	flex-direction: row;
-	div{
-		width: 50%;
+header {
+	font-size: 1.5rem;
+	padding: 0 10%;
+	nav {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		a {
+			text-decoration: none;
+			color: @textColor;
+			margin: 0 2%;
+		}
 	}
 }
 
-.thirdPart{
-	.flexbox ();
+.bigContainer {
+	padding: 0 10%;
+	border: 0 5%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.profileBlock {
+	display: flex;
+	justify-content: center;
+	width: 55%;
+	margin: 2.5%;
+}
+
+.firstPart {
+	width:90%;
+	.flexboxColumn();
+	flex-wrap: wrap;
+	background: @backgroundColor;
+	.imageBlock {
+		width: 25%;
+    	align-self: center;
+    	margin: 10% 20% 5% 20%;
+	}
+	.introBlock {
+		width: 50%;
+		align-self: center;
+		h1 {
+			font-size: 2rem;
+			text-align: center;
+		}
+		h2 {
+			font-size: 1.2rem;
+			text-align: center;
+		}
+	}
+	.aboutBlock {
+		background: @backgroundColor;
+		.BorderInset();
+		p {
+			width: 90%;
+    		text-align: left;
+    		color: orangered;
+    		font-size: 1.5rem;
+		}
+		button {
+			padding: 2%;
+			margin: 2%;
+			font-size: 20px;
+		}
+	}
+
+}
+
+.secondPart1 {
+	width: 30%;
+    .borderOutset();
+    padding: 20px;
+	h1 {
+		font-size: 4.5rem;
+		padding: 10%;
+	}
+	p {
+		font-size: 1.2rem;
+	}
+}
+
+.skillSets {
+	width: 90%;
+    padding: 5%;
+    background: @backgroundColor;
+    background-clip: content-box;
+    .BorderInset();
+    margin: 5% 0;
+	h1 {
+		font-size: 2rem;
+		color: orangered;
+		text-align: center;
+	}
+	ul {
+		font-size: 1.5rem;
+		li {
+			padding: 2%;
+		}
+		strong:hover {
+			color: #fd5f00;
+		}
+	}
+}
+
+.thirdPart {
+	.flexboxColumn();
+	background: @backgroundColor;
+    background-clip: content-box;
+    width: 90%;
+    padding: 5%;
+    .borderOutset();
+	h1 {
+		text-align: center;
+    	font-size: 2rem;
+    	margin: 2%;
+	}
 	table {
-		th {
-			text-align: left;
+		text-align: left;
+		tbody {
+			.firstRow {
+				font-size: 1.2rem;
+			}
+			tr:nth-of-type(2){
+				background: white;
+			}
+			tr:nth-of-type(4) {
+				background: white;
+			}
 		}
 	}
 }

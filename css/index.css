@@ -129,34 +129,141 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-  border: 1px solid red !important;
+  /*border:1px solid red !important;*/
 }
 html,
 body {
   height: 100%;
 }
 img {
-  width: 50%;
-  height: 20%;
+  width: 120%;
+  border-radius: 50%;
+  border: 7px groove #fd5f00;
+}
+header {
+  font-size: 1.5rem;
+  padding: 0 10%;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav a {
+  text-decoration: none;
+  color: #808000;
+  margin: 0 2%;
+}
+.bigContainer {
+  padding: 0 10%;
+  border: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.profileBlock {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  margin: 2.5%;
 }
 .firstPart {
+  width: 90%;
   display: flex;
   flex-direction: column;
-  background-color: silver;
+  flex-wrap: wrap;
+  background: whitesmoke;
 }
-.secondPart {
-  display: flex;
-  flex-direction: row;
+.firstPart .imageBlock {
+  width: 25%;
+  align-self: center;
+  margin: 10% 20% 5% 20%;
 }
-.secondPart div {
+.firstPart .introBlock {
   width: 50%;
+  align-self: center;
+}
+.firstPart .introBlock h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+.firstPart .introBlock h2 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.firstPart .aboutBlock {
+  background: whitesmoke;
+  border: 7px inset #fd5f00;
+}
+.firstPart .aboutBlock p {
+  width: 90%;
+  text-align: left;
+  color: orangered;
+  font-size: 1.5rem;
+}
+.firstPart .aboutBlock button {
+  padding: 2%;
+  margin: 2%;
+  font-size: 20px;
+}
+.secondPart1 {
+  width: 30%;
+  border: 7px outset #fd5f00;
+  padding: 20px;
+}
+.secondPart1 h1 {
+  font-size: 4.5rem;
+  padding: 10%;
+}
+.secondPart1 p {
+  font-size: 1.2rem;
+}
+.skillSets {
+  width: 90%;
+  padding: 5%;
+  background: whitesmoke;
+  background-clip: content-box;
+  border: 7px inset #fd5f00;
+  margin: 5% 0;
+}
+.skillSets h1 {
+  font-size: 2rem;
+  color: orangered;
+  text-align: center;
+}
+.skillSets ul {
+  font-size: 1.5rem;
+}
+.skillSets ul li {
+  padding: 2%;
+}
+.skillSets ul strong:hover {
+  color: #fd5f00;
 }
 .thirdPart {
   display: flex;
   flex-direction: column;
+  background: whitesmoke;
+  background-clip: content-box;
+  width: 90%;
+  padding: 5%;
+  border: 7px outset #fd5f00;
 }
-.thirdPart table th {
+.thirdPart h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2%;
+}
+.thirdPart table {
   text-align: left;
+}
+.thirdPart table tbody .firstRow {
+  font-size: 1.2rem;
+}
+.thirdPart table tbody tr:nth-of-type(2) {
+  background: white;
+}
+.thirdPart table tbody tr:nth-of-type(4) {
+  background: white;
 }
 footer {
   text-align: center;
