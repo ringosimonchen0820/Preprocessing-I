@@ -142,7 +142,7 @@ img {
 }
 header {
   font-size: 1.5rem;
-  padding: 0 10%;
+  padding: 3.5% 16.4% 3.5% 10%;
 }
 header nav {
   width: 100%;
@@ -151,7 +151,7 @@ header nav {
 }
 header nav a {
   text-decoration: none;
-  color: #808000;
+  color: olivedrab;
   margin: 0 2%;
 }
 .bigContainer {
