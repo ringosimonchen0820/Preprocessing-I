@@ -149,10 +149,25 @@ header nav {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 500px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 header nav a {
   text-decoration: none;
   color: olivedrab;
   margin: 0 2%;
+}
+@media (max-width: 500px) {
+  header nav a {
+    width: 80%;
+    text-align: center;
+    padding: 2%;
+    font-size: 2rem;
+    border-bottom: 1px double;
+  }
 }
 .bigContainer {
   padding: 0 10%;
@@ -160,11 +175,24 @@ header nav a {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 500px) {
+  .bigContainer {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .profileBlock {
   display: flex;
   justify-content: center;
   width: 55%;
   margin: 2.5%;
+}
+@media (max-width: 500px) {
+  .profileBlock {
+    width: 100%;
+  }
 }
 .firstPart {
   width: 90%;
@@ -200,19 +228,40 @@ header nav a {
   color: orangered;
   font-size: 1.5rem;
 }
+@media (max-width: 500px) {
+  .firstPart .aboutBlock p {
+    text-align: center;
+  }
+}
 .firstPart .aboutBlock button {
   padding: 2%;
   margin: 2%;
   font-size: 20px;
+}
+@media (max-width: 500px) {
+  .firstPart .aboutBlock button {
+    margin: 2% 0 2% 40%;
+  }
 }
 .secondPart1 {
   width: 30%;
   border: 7px outset #fd5f00;
   padding: 20px;
 }
+@media (max-width: 500px) {
+  .secondPart1 {
+    width: 100%;
+  }
+}
 .secondPart1 h1 {
   font-size: 4.5rem;
   padding: 10%;
+}
+@media (max-width: 500px) {
+  .secondPart1 h1 {
+    font-size: 4rem;
+    padding: 2% 0;
+  }
 }
 .secondPart1 p {
   font-size: 1.2rem;
@@ -230,8 +279,16 @@ header nav a {
   color: orangered;
   text-align: center;
 }
+.skillSets h1:hover {
+  color: black;
+}
 .skillSets ul {
   font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .skillSets ul {
+    text-align: center;
+  }
 }
 .skillSets ul li {
   padding: 2%;
@@ -248,6 +305,12 @@ header nav a {
   padding: 5%;
   border: 7px outset #fd5f00;
 }
+@media (max-width: 500px) {
+  .thirdPart {
+    width: 100%;
+    padding: 0;
+  }
+}
 .thirdPart h1 {
   text-align: center;
   font-size: 2rem;
@@ -256,8 +319,20 @@ header nav a {
 .thirdPart table {
   text-align: left;
 }
+@media (max-width: 500px) {
+  .thirdPart table tbody tr {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
 .thirdPart table tbody .firstRow {
   font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  .thirdPart table tbody .firstRow {
+    font-weight: bold;
+    font-size: 1rem;
+  }
 }
 .thirdPart table tbody tr:nth-of-type(2) {
   background: white;

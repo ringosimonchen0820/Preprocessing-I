@@ -99,14 +99,29 @@ img{
 header {
 	font-size: 1.5rem;
 	padding: 3.5% 16.4% 3.5% 10%;
+	
 	nav {
 		width: 100%;
 		display: flex;
 		justify-content: flex-end;
+		
+		@media (max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+		}
+		
 		a {
 			text-decoration: none;
 			color: olivedrab;
 			margin: 0 2%;
+			
+			@media (max-width: 500px) {
+				width: 80%;
+    			text-align: center;
+    			padding: 2%;
+    			font-size: 2rem;
+    			border-bottom: 1px double;
+			}
 		}
 	}
 }
@@ -116,6 +131,13 @@ header {
 	border: 0 5%;
 	display: flex;
 	flex-wrap: wrap;
+	
+	@media (max-width: 500px) {
+		flex-wrap: nowrap;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center;
+	}
 }
 
 .profileBlock {
@@ -123,6 +145,10 @@ header {
 	justify-content: center;
 	width: 55%;
 	margin: 2.5%;
+
+	@media (max-width: 500px) {
+		width: 100%;
+	}
 }
 
 .firstPart {
@@ -130,36 +156,51 @@ header {
 	.flexboxColumn();
 	flex-wrap: wrap;
 	background: @backgroundColor;
+	
 	.imageBlock {
 		width: 25%;
     	align-self: center;
     	margin: 10% 20% 5% 20%;
 	}
+	
 	.introBlock {
 		width: 50%;
 		align-self: center;
+		
 		h1 {
 			font-size: 2rem;
 			text-align: center;
 		}
+		
 		h2 {
 			font-size: 1.2rem;
 			text-align: center;
 		}
 	}
+	
 	.aboutBlock {
 		background: @backgroundColor;
 		.BorderInset();
+		
 		p {
 			width: 90%;
     		text-align: left;
     		color: orangered;
-    		font-size: 1.5rem;
+			font-size: 1.5rem;
+			
+			@media (max-width: 500px) {
+				text-align: center;
+			}
 		}
+		
 		button {
 			padding: 2%;
 			margin: 2%;
 			font-size: 20px;
+			
+			@media (max-width: 500px) {
+				margin: 2% 0 2% 40%;
+			}
 		}
 	}
 
@@ -168,11 +209,22 @@ header {
 .secondPart1 {
 	width: 30%;
     .borderOutset();
-    padding: 20px;
+	padding: 20px;
+	
+	@media (max-width: 500px) {
+		width: 100%;
+	}
+	
 	h1 {
 		font-size: 4.5rem;
 		padding: 10%;
+		
+		@media (max-width: 500px) {
+			font-size: 4rem;
+    		padding: 2% 0;
+		}
 	}
+	
 	p {
 		font-size: 1.2rem;
 	}
@@ -185,16 +237,28 @@ header {
     background-clip: content-box;
     .BorderInset();
     margin: 5% 0;
+	
 	h1 {
 		font-size: 2rem;
 		color: orangered;
 		text-align: center;
 	}
+
+	h1:hover {
+		color: black;
+	}
+	
 	ul {
 		font-size: 1.5rem;
+		
+		@media (max-width: 500px) {
+			text-align: center;
+		}
+
 		li {
 			padding: 2%;
 		}
+		
 		strong:hover {
 			color: #fd5f00;
 		}
@@ -208,20 +272,41 @@ header {
     width: 90%;
     padding: 5%;
     .borderOutset();
+	
+	@media (max-width: 500px) {
+		width: 100%;
+		padding: 0;
+	}
+
 	h1 {
 		text-align: center;
     	font-size: 2rem;
     	margin: 2%;
 	}
+	
 	table {
 		text-align: left;
+		
 		tbody {
+			tr {
+				@media (max-width: 500px) {
+					font-size: 1rem;
+    				text-align: center;
+				}
+			}
 			.firstRow {
 				font-size: 1.2rem;
+
+				@media (max-width: 500px) {
+					font-weight: bold;
+					font-size: 1rem;
+				}
 			}
+			
 			tr:nth-of-type(2){
 				background: white;
 			}
+			
 			tr:nth-of-type(4) {
 				background: white;
 			}
